@@ -1,1 +1,83 @@
 
+# Brain Tumor Classification using CNN
+
+## Name
+**Rakendu K M**  
+**Reg No:** 23BHI10019
+
+## Objective
+Build a CNN model to classify brain MRI images into four categories:
+- Glioma
+- Meningioma
+- No Tumor
+- Pituitary
+
+Target accuracy: **90%**
+
+## Dataset
+Brain Tumor MRI Dataset from Kaggle
+
+- Training Images: 5,600
+- Testing Images: 1,600
+- Classes: 4
+
+## Technologies Used
+- Python
+- TensorFlow / Keras
+- NumPy
+- Matplotlib
+- Scikit-learn
+- Seaborn
+
+## Model
+A CNN with:
+- 3 Convolutional blocks
+- Batch Normalization
+- Max Pooling
+- Dropout
+- Global Average Pooling
+- Dense layer
+- Softmax output layer
+
+## Image Processing
+- Image size: 64 × 64
+- Grayscale images
+- Pixel rescaling (1/255)
+
+Training augmentation:
+- Rotation
+- Width shift
+- Height shift
+- Zoom
+- Horizontal flip
+
+## Training
+- Optimizer: Adam
+- Loss: Sparse Categorical Crossentropy
+- Batch size: 32
+- Maximum epochs: 40
+- Early Stopping
+- ReduceLROnPlateau
+
+## Results
+- Best Test Accuracy: **91.75%**
+- Target Accuracy Achieved ✅
+
+### Classification Performance
+| Class | Precision | Recall | F1-score |
+|--------|-----------|--------|----------|
+| Glioma | 0.99 | 0.76 | 0.86 |
+| Meningioma | 0.93 | 0.91 | 0.92 |
+| No Tumor | 0.88 | 1.00 | 0.93 |
+| Pituitary | 0.89 | 1.00 | 0.94 |
+
+## Output
+The project generates:
+- Training & validation accuracy graph
+- Training & validation loss graph
+- Sample predictions
+- Confusion matrix
+- Classification report
+
+## Conclusion
+The CNN model achieved **91.75% test accuracy**, exceeding the target accuracy of **90%** for brain tumor MRI classification.
