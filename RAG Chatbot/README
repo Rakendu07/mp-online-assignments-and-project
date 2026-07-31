@@ -1,1 +1,236 @@
+# README.md
+
+# Financial Report RAG Chatbot using FastAPI, FAISS, and Gemini
+
+## Student Information
+
+**Name:** Rakendu K M
+**Registration Number:** 23BHI10019
+**Application Number:** IN26011267
+**Batch:** 2B
+
+---
+
+# Project Overview
+
+This project implements a **Retrieval-Augmented Generation (RAG) Chatbot** that answers user questions based only on the content of a financial report. The application retrieves the most relevant document chunks using **FAISS vector search** and generates grounded responses using the **Google Gemini API**. The chatbot is built with **FastAPI** and is designed for deployment on **Render**. The project builds a vector index from a PDF or HTML report, stores embeddings, retrieves the most relevant text passages, and uses them to generate accurate answers.  
+
+---
+
+# Objective
+
+* Build a Retrieval-Augmented Generation (RAG) chatbot.
+* Retrieve relevant document passages using semantic search.
+* Generate responses grounded only in the retrieved context.
+* Deploy the application using FastAPI and Render.
+
+---
+
+# Features
+
+* Financial report document ingestion
+* PDF and HTML support
+* Automatic text extraction
+* Text chunking with overlap
+* SentenceTransformer embeddings
+* FAISS vector database
+* Semantic search
+* Google Gemini integration
+* FastAPI REST API
+* Render deployment support
+
+---
+
+# Technologies Used
+
+* Python
+* FastAPI
+* FAISS
+* Sentence Transformers
+* Google Gemini API
+* NumPy
+* BeautifulSoup
+* PyPDF
+* Uvicorn
+* Render
+
+---
+
+# Project Workflow
+
+1. Read a financial report (PDF or HTML).
+2. Extract plain text.
+3. Split the text into overlapping chunks.
+4. Generate embeddings using SentenceTransformer.
+5. Store embeddings in a FAISS vector index.
+6. Accept a user query through the FastAPI endpoint.
+7. Retrieve the most relevant document chunks.
+8. Send the retrieved context to Gemini.
+9. Generate a grounded response.
+10. Return the answer along with supporting excerpts.  
+
+---
+
+# Project Structure
+
+```text
+Financial-RAG-Chatbot/
+│
+├── main.py
+├── ingest.py
+├── rag.py
+├── requirements.txt
+├── render.yaml
+├── env.example
+├── README.md
+│
+├── app/
+│     config.py
+│
+├── static/
+│     index.html
+│
+├── index/
+│     faiss.index
+│     chunks.json
+│     meta.json
+│
+└── reports/
+      financial_report.pdf
+```
+
+---
+
+# APIs
+
+### Health Check
+
+```text
+GET /api/health
+```
+
+Returns:
+
+* Server status
+* Index status
+* API key availability
+
+### Chat
+
+```text
+POST /api/chat
+```
+
+Input
+
+```json
+{
+  "message": "What was the company's revenue?",
+  "history": []
+}
+```
+
+Output
+
+```json
+{
+  "answer": "...",
+  "sources": [
+    {
+      "rank": 1,
+      "score": 0.91
+    }
+  ]
+}
+```
+
+### Rebuild Index
+
+```text
+POST /api/reindex
+```
+
+Recreates the FAISS vector index from the source document.
+
+---
+
+# Libraries Used
+
+* fastapi
+* uvicorn
+* pydantic
+* requests
+* beautifulsoup4
+* pypdf
+* numpy
+* faiss-cpu
+* torch
+* sentence-transformers
+* google-genai
+* python-dotenv 
+
+---
+
+# Retrieval Pipeline
+
+* Source document loading
+* Text extraction
+* Text chunking
+* Embedding generation
+* FAISS indexing
+* Semantic retrieval
+* Gemini response generation
+
+---
+
+# Evaluation
+
+The system can be evaluated using:
+
+* Retrieval Accuracy
+* Top-K Retrieval
+* Cosine Similarity Score
+* Response Latency
+* Grounded Response Quality
+* Context Relevance
+* API Response Time
+
+---
+
+# Deployment
+
+The project is configured for deployment on **Render** using:
+
+* FastAPI
+* Uvicorn
+* `render.yaml`
+* Environment variables for the Gemini API key
+
+---
+
+# Future Enhancements
+
+* Multi-document support
+* Conversation memory
+* PDF upload interface
+* User authentication
+* Citation highlighting
+* Streamlit or React frontend
+* Hybrid keyword and semantic search
+* Support for multiple LLM providers
+
+---
+
+# Conclusion
+
+This project demonstrates a complete Retrieval-Augmented Generation pipeline by combining document ingestion, semantic search with FAISS, and response generation using Google Gemini. It provides grounded answers based only on the indexed financial report and is suitable for cloud deployment using FastAPI and Render.
+
+---
+
+# Author
+
+**Rakendu K M**
+**Registration Number:** 23BHI10019
+**Application Number:** IN26011267
+**Batch:** 2B
 
