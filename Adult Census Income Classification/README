@@ -1,1 +1,137 @@
+# README.md
+
+# Adult Census Income Classification using Machine Learning
+
+## Student Information
+
+**Name:** Rakendu K M
+**Registration Number:** 23BHI10019
+**Application Number:** IN26011267
+**Batch:** 2B
+
+---
+
+## Project Overview
+
+This project predicts whether an individual's annual income is **greater than $50K** or **less than or equal to $50K** using demographic and employment-related information from the Adult Census Income dataset. A **Random Forest Classifier** is used to train the model after preprocessing the data.
+
+---
+
+## Dataset
+
+* **Dataset:** Adult Census Income Dataset
+* **Source:** [https://www.kaggle.com/datasets/uciml/adult-census-income](https://www.kaggle.com/datasets/uciml/adult-census-income)
+
+---
+
+## Features
+
+The dataset includes attributes such as:
+
+* Age
+* Workclass
+* Education
+* Marital Status
+* Occupation
+* Relationship
+* Race
+* Sex
+* Capital Gain
+* Capital Loss
+* Hours per Week
+* Native Country
+
+**Target Variable**
+
+* Income (<=50K or >50K)
+
+---
+
+## Technologies Used
+
+* Python
+* Pandas
+* NumPy
+* Scikit-learn
+
+---
+
+## Machine Learning Algorithm
+
+* Random Forest Classifier
+
+---
+
+## Project Workflow
+
+1. Import required libraries.
+2. Load the Adult Census Income dataset.
+3. Handle missing values.
+4. Encode categorical variables using Label Encoding.
+5. Split the dataset into training and testing sets.
+6. Train the Random Forest model.
+7. Predict income classes.
+8. Evaluate the model using:
+
+   * Accuracy Score
+   * Classification Report
+   * Confusion Matrix
+
+---
+
+## Libraries Required
+
+```python
+pandas
+numpy
+scikit-learn
+```
+
+Install them using:
+
+```bash
+pip install pandas numpy scikit-learn
+```
+
+---
+
+## Project Structure
+
+```
+Adult-Census-Income-Classification/
+│
+├── adult.csv
+├── income_classification.py
+├── README.md
+└── requirements.txt
+```
+
+---
+
+## Output
+
+The program displays:
+
+* Dataset information
+* Model accuracy
+* Classification report
+* Confusion matrix
+
+---
+
+## Future Enhancements
+
+* Compare multiple machine learning algorithms.
+* Perform hyperparameter tuning.
+* Deploy the model using Flask or Streamlit.
+* Add data visualization dashboards.
+
+---
+
+## Author
+
+**Rakendu K M**
+**Registration Number:** 23BHI10019
+**Application Number:** IN26011267
+**Batch:** 2B
 
