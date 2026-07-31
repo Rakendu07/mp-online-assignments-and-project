@@ -1,1 +1,209 @@
+# README.md
+
+# Student Performance Prediction using Machine Learning
+
+## Student Information
+
+**Name:** Rakendu K M
+**Registration Number:** 23BHI10019
+**Application Number:** IN26011267
+**Batch:** 2B
+
+---
+
+# Project Overview
+
+This project predicts a student's **Exam Score** based on various academic, personal, and socio-economic factors using Machine Learning. The model is trained using the **Student Performance Factors** dataset and deployed as a predictive application.
+
+---
+
+# Objective
+
+To build a regression model that accurately predicts student exam scores using demographic, academic, and lifestyle features.
+
+---
+
+# Dataset
+
+**Dataset Name:** Student Performance Factors Dataset
+
+**Source:** Kaggle
+
+The dataset contains **6,607 student records** with **20 attributes**.
+
+### Features
+
+* Hours Studied
+* Attendance
+* Parental Involvement
+* Access to Resources
+* Extracurricular Activities
+* Sleep Hours
+* Previous Scores
+* Motivation Level
+* Internet Access
+* Tutoring Sessions
+* Family Income
+* Teacher Quality
+* School Type
+* Peer Influence
+* Physical Activity
+* Learning Disabilities
+* Parental Education Level
+* Distance from Home
+* Gender
+
+### Target Variable
+
+* **Exam_Score**
+
+---
+
+# Technologies Used
+
+* Python
+* Pandas
+* NumPy
+* Scikit-learn
+* Matplotlib
+* Joblib
+
+---
+
+# Machine Learning Algorithm
+
+* Random Forest Regressor
+
+---
+
+# Project Workflow
+
+1. Import required libraries.
+2. Extract the dataset from ZIP.
+3. Load the dataset.
+4. Explore and clean the data.
+5. Handle missing values.
+6. Separate numerical and categorical features.
+7. Apply preprocessing using:
+
+   * StandardScaler
+   * OneHotEncoder
+   * SimpleImputer
+8. Split the dataset into training and testing sets.
+9. Train the Random Forest Regressor.
+10. Predict exam scores.
+11. Evaluate the model.
+12. Save the trained model and preprocessor.
+
+---
+
+# Data Preprocessing
+
+* Missing value imputation
+* Feature scaling
+* One-hot encoding
+* Train-test split (80:20)
+
+---
+
+# Model Evaluation Metrics
+
+The following metrics are used:
+
+* Mean Absolute Error (MAE)
+* Mean Squared Error (MSE)
+* Root Mean Squared Error (RMSE)
+* R² Score
+* Explained Variance Score
+* Maximum Error
+
+Example output:
+
+```text
+MAE  : 1.0730
+RMSE : 2.1495
+R² Score : 0.6731
+```
+
+---
+
+# Visualizations
+
+The project includes:
+
+* Actual vs Predicted Scatter Plot
+* Residual Plot
+* Feature Importance Chart
+
+---
+
+# Project Structure
+
+```text
+Student-Performance-Prediction/
+│
+├── app.py
+├── model_training.py
+├── model.pkl
+├── preprocessor.pkl
+├── requirements.txt
+├── README.md
+├── StudentPerformanceFactors.csv
+│
+├── templates/
+│      index.html
+│
+├── static/
+│
+└── notebook.ipynb
+```
+
+---
+
+# Required Libraries
+
+```text
+pandas
+numpy
+scikit-learn
+matplotlib
+joblib
+```
+
+Install using:
+
+```bash
+pip install pandas numpy scikit-learn matplotlib joblib
+```
+
+---
+
+# Results
+
+The Random Forest Regressor achieved:
+
+* **Mean Absolute Error (MAE):** 1.0730
+* **Root Mean Squared Error (RMSE):** 2.1495
+* **R² Score:** 0.6731
+
+The model demonstrates good predictive performance for estimating student exam scores.
+
+---
+
+# Future Enhancements
+
+* Compare multiple regression algorithms.
+* Perform hyperparameter tuning.
+* Deploy the application using Flask and Render.
+* Add interactive dashboards for visualization.
+* Incorporate additional educational and behavioral features.
+
+---
+
+# Author
+
+**Rakendu K M**
+**Registration Number:** 23BHI10019
+**Application Number:** IN26011267
+**Batch:** 2B
 
