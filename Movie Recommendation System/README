@@ -1,1 +1,217 @@
+# README.md
+
+# Movie Recommendation System using Content-Based Filtering
+
+## Student Information
+
+**Name:** Rakendu K M
+**Registration Number:** 23BHI10019
+**Application Number:** IN26011267
+**Batch:** 2B
+
+---
+
+# Project Overview
+
+This project implements a **Content-Based Movie Recommendation System** that recommends movies similar to a selected movie using movie metadata such as genres, keywords, cast, director, and overview. The recommendation engine uses **Count Vectorization** and **Cosine Similarity** to identify movies with similar content.
+
+---
+
+# Objective
+
+To develop a movie recommendation system that suggests relevant movies based on the content and characteristics of a selected movie.
+
+---
+
+# Dataset
+
+**Dataset Name:** TMDB 5000 Movie Dataset
+
+**Files Used**
+
+* `tmdb_5000_movies.csv`
+* `tmdb_5000_credits.csv`
+
+**Source:** Kaggle
+
+---
+
+# Dataset Description
+
+The dataset contains information about approximately **5,000 movies**, including:
+
+* Movie Title
+* Genres
+* Keywords
+* Overview
+* Cast
+* Crew
+* Director
+* Popularity
+* Runtime
+* Vote Average
+* Release Date
+
+---
+
+# Technologies Used
+
+* Python
+* Pandas
+* NumPy
+* Scikit-learn
+* CountVectorizer
+* Cosine Similarity
+* AST Library
+
+---
+
+# Recommendation Technique
+
+**Content-Based Filtering**
+
+The system recommends movies by comparing their textual features instead of relying on user ratings.
+
+---
+
+# Project Workflow
+
+1. Import required libraries.
+2. Extract the dataset.
+3. Load movie and credits datasets.
+4. Merge both datasets.
+5. Select important features.
+6. Handle missing values.
+7. Extract genres, keywords, cast, and director information.
+8. Create a combined "tags" feature.
+9. Convert text into numerical vectors using CountVectorizer.
+10. Compute Cosine Similarity between movies.
+11. Recommend the Top-5 similar movies.
+
+---
+
+# Feature Engineering
+
+The following features are combined to create movie tags:
+
+* Overview
+* Genres
+* Keywords
+* Top 3 Cast Members
+* Director
+
+---
+
+# Machine Learning Technique
+
+* Count Vectorizer
+* Cosine Similarity
+
+---
+
+# Evaluation
+
+The recommendation system is evaluated using:
+
+* Cosine Similarity Scores
+* Top-5 Recommended Movies
+* Similarity Matrix
+* Recommendation Time
+* Coverage
+* Vocabulary Size
+
+Example Output
+
+```text
+Recommended Movies for: Avatar
+
+1. Titan A.E.
+2. Small Soldiers
+3. Independence Day
+4. Ender's Game
+5. Aliens vs Predator: Requiem
+```
+
+---
+
+# Project Structure
+
+```text
+Movie-Recommendation-System/
+│
+├── MovieRecommendation.ipynb
+├── README.md
+├── requirements.txt
+│
+├── dataset/
+│      tmdb_5000_movies.csv
+│      tmdb_5000_credits.csv
+│
+├── model/
+│      similarity.pkl
+│      movies.pkl
+│
+└── app.py
+```
+
+---
+
+# Required Libraries
+
+```text
+pandas
+numpy
+scikit-learn
+```
+
+Install the required libraries:
+
+```bash
+pip install pandas numpy scikit-learn
+```
+
+---
+
+# Sample Recommendation
+
+**Input Movie**
+
+```text
+Avatar
+```
+
+**Recommended Movies**
+
+```text
+Titan A.E.
+Small Soldiers
+Independence Day
+Ender's Game
+Aliens vs Predator: Requiem
+```
+
+---
+
+# Future Enhancements
+
+* Hybrid recommendation using collaborative and content-based filtering.
+* Integrate movie posters using the TMDB API.
+* Develop a web application using Flask or Streamlit.
+* Add user authentication and personalized recommendations.
+* Deploy the application on Render or Streamlit Cloud.
+
+---
+
+# Conclusion
+
+The Movie Recommendation System successfully recommends similar movies by analyzing their content. Using **CountVectorizer** and **Cosine Similarity**, the system provides fast and relevant recommendations based on movie metadata, making it suitable for content-based recommendation tasks.
+
+---
+
+# Author
+
+**Rakendu K M**
+**Registration Number:** 23BHI10019
+**Application Number:** IN26011267
+**Batch:** 2B
 
